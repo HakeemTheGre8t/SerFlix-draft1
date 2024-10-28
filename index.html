@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SerFlix - Spin the Wheel! </title>
+    <script defer src ="script.js"></script>
+</head>
+<body>
+    <h1>SerFlix - Pick a Random Film!</h1>
+
+<!--Input field and button to add film-->
+<div>
+    <input type="text" id="filmTitle" placeholder="Enter film title" required>
+    <button id="addFilmBtn">Add Films</button>
+</div>
+
+    <!--Button to select two random film-->
+    <div>
+        <button id="randomFilmBtn">Pick Two Random Films</button>
+    </div>
+
+<!--Random Film Suggestions: Button to suggest a random film-->
+
+
+<!--Display area for the suggested film-->
+<div id="randomSuggestionDisplay"></div>
+
+<!--Display the list of films added-->
+<h3>Film List:</h3>
+<ul id="filmList"></ul>
+
+<!--Display the random film or the "spin the wheel" result -->
+<h3>Selected Films and Winner:</h3>
+<div id="randomFilmDisplay"></div>
+<button id="suggestRandomFilmBtn">Suggest a Random Movie</button>
+
+<!--Add film form for more infromation for the user-->
+<h3>Create Your Movie Collection </h3>
+<form id="FilmForm">
+    <input type="text" id="title" placeholder="Film Title" required />
+    <input type="text" id="genre" placeholder="Genre" required />
+    <input type="number" id="year" placeholder="Year" required />
+    <textarea id="description" placeholder="Film Description"></textarea>
+    <button type="button" id="addDetailFilmBtn">Add Detailed Film</button>
+</form>
+<ul id="detailedFilmList"></ul>
+
+<!--Allow users to create and save film lists based on differnt occasions-->
+<h3>Set Up Your Movie Night Profile</h3>
+<form id="profileForm">
+    <input type="text" id="username" placeholder="Enter your username" required />
+    <button type="button" id="loginBtn">Login / Create Profile</button>
+</form>
+<div id="currentUser"></div>
+
+<!--Div for data output-->
+<div class="dataOutput"></div>
+
+
+</body>
+</html>
