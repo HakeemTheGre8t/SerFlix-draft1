@@ -1,0 +1,118 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling the input fields and buttons */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Section headers */
+h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 5px;
+}
+
+/* Display aea for selected and random films */
+#randomFilmDisplay,
+#randomSuggestionDisplay,
+#detailedFilmList {
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specfic button styling for film suggestions */
+#suggestRandomFilmBtn,
+#randomFilmBtn {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Film list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f3f3f3;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/* Wheel animation styling */
+#wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(#ff6b6b, #ff4c4c, #ff6b6b, #ff4c4c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    position: relative;
+    animation: spin 3s ease-out;
+}
+
+#wheel::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #333;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg); }
+    to {transform: rotate(1080deg); }
+}
+
+/* Winner section styling */
+#winner {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 20px;
+}
+
