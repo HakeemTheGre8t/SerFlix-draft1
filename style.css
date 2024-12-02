@@ -7,9 +7,9 @@ body {
 }
 
 /* Styling the input fields and buttons */
-input[type="text"],
-input[type="number"],
-textarea {
+    input[type="text"],
+    input[type="number"],
+    textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -45,10 +45,12 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Display aea for selected and random films */
+/* Display area for selected and random films */
 #randomFilmDisplay,
 #randomSuggestionDisplay,
-#detailedFilmList {
+#detailedFilmList,
+#filmList,
+#currentUser, {
     background-color: #fff;
     padding: 15px;
     margin: 15px 0;
@@ -62,6 +64,20 @@ h3 {
 #randomFilmBtn {
     width: 100%;
     font-weight: bold;
+}
+
+/* Data output styling */
+.dataOutput {
+    background-color: #e8f4ff;
+    padding: 10px;
+    border: 1px solid #b3d1ff;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Form Layout */
+form {
+    margin-bottom: 20px;
 }
 
 /* Film list styling */

@@ -1,5 +1,6 @@
 // Initialise an empty array to store films
 let filmsArray = [];
+let movies = [];
 
 // Add film to the list and save it to local storage
 document.getElementById("addFilmBtn").addEventListener("click", function() {
@@ -71,17 +72,27 @@ displayDetailedFilms();
 
 //Function to display films from the array in the UI
 function displayFilms() {
-    const filmListElement = document.getElementById("filmList");
-    filmListElement.innerHTML = ""; // Clear the list
+    const filmList = document.getElementById("filmList");
 
-    filmsArray.forEach(film => {
-        const li = document.createElement("li");
-        li.textContent = film;
-        filmListElement.appendChild(li);
-    });
+// Clear the list
+    filmList.innerHTML = ""; 
+
+    if (Array.isArray(movies) && movies.length > 0) {
+        // Loop through each movie and create a list item
+        movies.forEach(movie => {
+            const listItem = document.getElementById("filmList");
+            listItem.textContent = `${movies.title} (${movies.year})`;
+            filmList.appendChild(listItem);
+        });
+    } else {
+        // Display a message if no movies are available 
+        filmList.innerHTML = "<li>No film available to display.</li>";
+    }
 }
 
-// Load films from loacl storage when the page laods
+
+
+// Load films from local storage when the page laods
 window.onload = function() {
     const storedFilms = localStorage.getItem("filmsArray");
     if (storedFilms) {
@@ -182,7 +193,7 @@ document.getElementById("addFilmBtn").addEventListener("click", () => {
             filmsArray.push(film);
             localStorage.setItem(currentUser, JSON.stringify(filmsArray));
             document.getElementById("filmForm").reset();
-        }else {
+        } else {
             alert("Please fill out all required fields.");
         }
     } else {
@@ -254,7 +265,7 @@ document.getElementById("suggestRandomFilmBtn").addEventListener("click", async 
 
 
     // Choose a random movie from the results
-    let movies = [];
+
     let randomMovie = null; // Global variable to store the selected random movie
 
 
@@ -263,6 +274,11 @@ document.getElementById("suggestRandomFilmBtn").addEventListener("click", async 
         try {
             const response = await fetch("https://api.themoviedb.org/3/movie/550?api_key=96e2e205074fb79b6b0f4d7a45315524");
             const data = await response.json();
+            
+            // Assign the results to movies array 
+            movies = data.results || []; // Use an empty array if data.results is underfined
+
+            displayFilms(); // Call display function to update the UI with fetched movies
             
             // Log the entire API response to check its structure
             console.log("API Data:", data);
@@ -276,6 +292,11 @@ document.getElementById("suggestRandomFilmBtn").addEventListener("click", async 
         }
     }
 
+// Call fetchMovies when the page loads or on a specific action
+    document.addEventListener("DOMContentLoaded", fetchMovies);
+
+// Add an event listener to the button to display films
+    document.getElementById("suggestRandomFilmBtn").addEventListener("click", displayFilms);
 
 // Function to choose a random movie from the fetched movies array
     function chooseRandomMovie() {
@@ -284,8 +305,7 @@ document.getElementById("suggestRandomFilmBtn").addEventListener("click", async 
             document.getElementById("randomFilmDisplay").textContent = "No movie available for suggestions.";
             return;
         }
-
-        randomMovie = movies[Math.floor(Math.random() * movies.length)]; // Set the randomMovie globally 
+        const randomMovie = movies[Math.floor(Math.random() * movies.length)]; // Set the randomMovie globally 
         console.log("Random movie chosen:", randomMovie.title);
         displayMovieDetails(); // Call function to display details
     }
