@@ -11,205 +11,129 @@ body {
 
 
   /* Page container */
-  
-  .container {
-  
+.container {
     max-width: 800px;
-  
     margin: 0 auto;
-  
     padding: 20px;
-  
     background-color: white;
-  
     border-radius: 8px;
-  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-  }
-  
-  
-  
+}
+
+
   /* Header Styling */
-  
-  h1 {
-  
+h1 {
     font-size: 2.5rem;
-  
     color: #333;
-  
     margin-bottom: 20px;
-  
-  }
-  
-  
-  
+}
+
+
+
   /* Film input section */
-  
-  #filmForm {
-  
+#filmForm {
     margin-bottom: 20px;
-  
-  }
-  
-  
-  
-  input[type="text"] {
-  
+}
+
+
+
+input[type="text"] {
     padding: 12px 15px;
-  
     font-size: 16px;
-  
     width: 80%;
-  
     max-width: 300px;
-  
     margin-right: 10px;
-  
     border: 2px solid #ccc;
-  
     border-radius: 4px;
-  
-  }
-  
-  
-  
-  button {
-  
+}
+
+
+
+button {
     padding: 12px 20px;
-  
     font-size: 16px;
-  
     cursor: pointer;
-  
     background-color: #4CAF50;
-  
     color: white;
-  
     border: none;
-  
     border-radius: 4px;
-  
     transition: background-color 0.3s ease;
-  
-  }
-  
-  
-  
-  button:hover {
-  
+}
+
+
+
+button:hover {
     background-color: #45a049;
-  
-  }
-  
-  
-  
+}
+
+
+
   /* Film list styling */
-  
-  ul {
-  
+ul {
     list-style-type: none;
-  
     padding: 0;
-  
     margin-top: 20px;
-  
-  }
-  
-  
-  
-  li {
-  
+}
+
+
+
+li {
     font-size: 18px;
-  
     margin: 8px 0;
-  
     padding: 8px;
-  
     background-color: #f9f9f9;
-  
     border-radius: 4px;
-  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  
-  }
-  
-  
-  
+}
+
+
+
   /* Spin the wheel button */
-  
-  #spinButton {
-  
+#spinButton {
     background-color: #ff9800;
-  
     margin-top: 30px;
-  
-  }
-  
-  
-  
-  #spinButton:hover {
-  
+}
+
+
+
+#spinButton:hover {
     background-color: #e68900;
-  
-  }
-  
-  
-  
+}
+
+
+
   /* Random film display */
-  
-  #randomFilm {
-  
+#randomFilm {
     margin-top: 30px;
-  
     font-size: 20px;
-  
     font-weight: bold;
-  
     color: #333;
-  
     background-color: #e7e7e7;
-  
     padding: 15px;
-  
     border-radius: 4px;
-  
-  }
-  
-  
-  
+}
+
+
+
   /* Suggested Movie Section */
-  
-  #suggestedMovie {
-  
+#suggestedMovie {
     margin-top: 20px;
-  
     font-size: 18px;
-  
     color: #333;
-  
     background-color: #f2f2f2;
-  
     padding: 10px;
-  
     border-radius: 4px;
-  
-  }
-  
-  
-  
-  #suggestButton {
-  
+}
+
+
+
+#suggestButton {
     background-color: #007bff;
-  
     margin-top: 20px;
-  
-  }
-  
-  
-  
-  #suggestButton:hover {
-  
+}
+
+
+
+#suggestButton:hover {
     background-color: #0056b3;
-  
-  }
+}
