@@ -10,11 +10,11 @@ const suggestedMovieDisplay = document.getElementById('suggestedMovie');
 let films = [];
 // Load films from local storage on page load
 window.onload = () => {
-  const storedFilms = JSON.parse(localStorage.getItem('films'));
-  if (storedFilms) {
+const storedFilms = JSON.parse(localStorage.getItem('films'));
+    if (storedFilms) {
     films = storedFilms;
     updateFilmList();
-  }
+    }
 };
 // Function to add a film to the list
 addFilmButton.addEventListener('click', () => {

@@ -1,133 +1,215 @@
-/* General styling for the page */
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-}
-
-/* Styling the input fields and buttons */
-    input[type="text"],
-    input[type="number"],
-    textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-/* Buttons */
-button {
-    background-color: #ff6b6b;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #ff4c4c;
-}
-
-/* Section headers */
-h3 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ff6b6b;
-    padding-bottom: 5px;
-}
-
-/* Display area for selected and random films */
-#randomFilmDisplay,
-#randomSuggestionDisplay,
-#detailedFilmList,
-#filmList,
-#currentUser, {
-    background-color: #fff;
-    padding: 15px;
-    margin: 15px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Specfic button styling for film suggestions */
-#suggestRandomFilmBtn,
-#randomFilmBtn {
-    width: 100%;
-    font-weight: bold;
-}
-
-/* Data output styling */
-.dataOutput {
-    background-color: #e8f4ff;
-    padding: 10px;
-    border: 1px solid #b3d1ff;
-    border-radius: 5px;
-    font-size: 0.9em;
-}
-
-/* Form Layout */
-form {
-    margin-bottom: 20px;
-}
-
-/* Film list styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #f3f3f3;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 3px;
-}
-
-/* Wheel animation styling */
-#wheel {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: conic-gradient(#ff6b6b, #ff4c4c, #ff6b6b, #ff4c4c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto;
-    position: relative;
-    animation: spin 3s ease-out;
-}
-
-#wheel::before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #333;
-}
-
-@keyframes spin {
-    from {transform: rotate(0deg); }
-    to {transform: rotate(1080deg); }
-}
-
-/* Winner section styling */
-#winner {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ff6b6b;
+    margin: 0;
+    padding: 0;  
     text-align: center;
-    margin-top: 20px;
 }
+
+
+
+  /* Page container */
+  
+  .container {
+  
+    max-width: 800px;
+  
+    margin: 0 auto;
+  
+    padding: 20px;
+  
+    background-color: white;
+  
+    border-radius: 8px;
+  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  
+  /* Header Styling */
+  
+  h1 {
+  
+    font-size: 2.5rem;
+  
+    color: #333;
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  
+  /* Film input section */
+  
+  #filmForm {
+  
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  
+  input[type="text"] {
+  
+    padding: 12px 15px;
+  
+    font-size: 16px;
+  
+    width: 80%;
+  
+    max-width: 300px;
+  
+    margin-right: 10px;
+  
+    border: 2px solid #ccc;
+  
+    border-radius: 4px;
+  
+  }
+  
+  
+  
+  button {
+  
+    padding: 12px 20px;
+  
+    font-size: 16px;
+  
+    cursor: pointer;
+  
+    background-color: #4CAF50;
+  
+    color: white;
+  
+    border: none;
+  
+    border-radius: 4px;
+  
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  
+  
+  button:hover {
+  
+    background-color: #45a049;
+  
+  }
+  
+  
+  
+  /* Film list styling */
+  
+  ul {
+  
+    list-style-type: none;
+  
+    padding: 0;
+  
+    margin-top: 20px;
+  
+  }
+  
+  
+  
+  li {
+  
+    font-size: 18px;
+  
+    margin: 8px 0;
+  
+    padding: 8px;
+  
+    background-color: #f9f9f9;
+  
+    border-radius: 4px;
+  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  
+  
+  /* Spin the wheel button */
+  
+  #spinButton {
+  
+    background-color: #ff9800;
+  
+    margin-top: 30px;
+  
+  }
+  
+  
+  
+  #spinButton:hover {
+  
+    background-color: #e68900;
+  
+  }
+  
+  
+  
+  /* Random film display */
+  
+  #randomFilm {
+  
+    margin-top: 30px;
+  
+    font-size: 20px;
+  
+    font-weight: bold;
+  
+    color: #333;
+  
+    background-color: #e7e7e7;
+  
+    padding: 15px;
+  
+    border-radius: 4px;
+  
+  }
+  
+  
+  
+  /* Suggested Movie Section */
+  
+  #suggestedMovie {
+  
+    margin-top: 20px;
+  
+    font-size: 18px;
+  
+    color: #333;
+  
+    background-color: #f2f2f2;
+  
+    padding: 10px;
+  
+    border-radius: 4px;
+  
+  }
+  
+  
+  
+  #suggestButton {
+  
+    background-color: #007bff;
+  
+    margin-top: 20px;
+  
+  }
+  
+  
+  
+  #suggestButton:hover {
+  
+    background-color: #0056b3;
+  
+  }
