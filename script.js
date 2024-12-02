@@ -171,7 +171,7 @@ document.getElementById("loginBtn").addEventListener("click", () => {
         currentUser = username;
         document.getElementById("currentUser").innerText = `logged in as: ${currentUser}`;
 
-        // Load the user's film lsit or initialise a new one
+        // Load the user's film list or initialise a new one
         const userFilms = JSON.parse(localStorage.getItem(currentUser)) || [];
         console.log("Loaded films for", currentUser, userFilms);
 
