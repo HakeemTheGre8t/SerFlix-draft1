@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SerFlix - Movie Roulette</title>
-<script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 
 <body>
-<div class="container">
-    <h1>SerFlix Movie Roulette</h1>
+<header>
+    <h1>SerFlix - Movie Roulette</h1>
+</header>
 
-    <!-- Film Entry Section -->
-    <div id="filmForm">
-    <input type="text" id="filmTitle" placeholder="Enter Film Title">
+<main>
+    <!-- Input for adding a new film -->
+    <section id="addFilmSection">
+    <h2>Add a Movie</h2>
+    <input type="text" id="filmTitle" placeholder="Enter film title" />
     <button id="addFilmButton">Add Film</button>
-    </div>
+    </section>
 
 
 
-    <!-- Film List Section -->
-    <ul id="filmList"></ul>
+    <!-- List of films -->
+    <section id="filmListSection">
+    <h2>Film List</h2>
+    <ul id="filmList">
+        <!-- Dynamically populated with films -->
+    </ul>
+    </section>
 
 
-    <!-- Spin Button Section -->
-    <button id="spinButton">Spin the Wheel</button>
+
+    <!-- Spin the wheel to choose a random film -->
+    <section id="rouletteSection">
+    <h2>Spin the Wheel</h2>
+    <button id="spinButton">Spin</button>
+    <p id="randomFilm">Your movie will appear here!</p>
+    </section>
 
 
-    <!-- Random Film Display -->
-    <div id="randomFilm"></div>
 
+    <!-- Suggested movie from OMDB API -->
+    <section id="suggestedMovieSection">
+    <h2>Suggested Movie</h2>
+    <button id="suggestButton">Suggest a Movie</button>
+    <p id="suggestedMovie">Your suggested movie will appear here!</p>
+    </section>
+</main>
 
-    <!-- Suggested Movie Section -->
-    <button id="suggestButton">Get Suggested Movie</button>
-    <div id="suggestedMovie"></div>
-    </div>
+<footer>
+    <p>&copy; 2024 SerFlix</p>
+</footer>
 </body>
 </html>
-

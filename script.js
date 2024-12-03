@@ -14,8 +14,8 @@ let films = [];
 window.onload = () => {
     const storedFilms = JSON.parse(localStorage.getItem('films'));
     if (storedFilms) {
-        films = storedFilms;
-        updateFilmList();
+    films = storedFilms;
+    updateFilmList();
     }
 };
 // Function to add a film to the list
@@ -26,7 +26,7 @@ addFilmButton.addEventListener('click', () => {
         localStorage.setItem('films', JSON.stringify(films)); // Save to local storage
         updateFilmList(); // Update the displayed film list
         filmTitleInput.value = ''; // Clear the input field
-    }
+}
 });
 
     // Function to update the film list displayed on the page
